@@ -61,3 +61,11 @@ Trick to make the form compatible with Bootstrap 4 :
 twig:
     form_themes: ['bootstrap_4_layout.html.twig']
 ```
+
+# API PLATFORM 
+It is a very good tool to automatically create a CRUD APIs
+Is quite simple, the first step is to install the bundle.
+
+```bash
+ composer require api
+```
