@@ -36,3 +36,14 @@ DATABASE_URL=mysql://root:mysqlroot@127.0.0.1:3306/motor_meetup_project?serverVe
 * DBName : motor_meetup_project
 * serverVersion : 5.7
 
+First step, we need to create the DB :
+
+```bash
+php bin/console doctrine:database:create
+```
+
+And update the db with the new objects :
+
+```bash
+php bin/console doctrine:schema:update --force
+```
