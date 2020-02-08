@@ -47,3 +47,9 @@ And update the db with the new objects :
 ```bash
 php bin/console doctrine:schema:update --force
 ```
+
+## FORM
+
+```bash
+ php bin/console make:form  
+```
