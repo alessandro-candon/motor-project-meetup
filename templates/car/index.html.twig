@@ -4,6 +4,9 @@
 
 {% block container %}
 
-	{{ form(car_form) }}
+	{{ form_start(car_form) }}
+	{{ form_rest(car_form) }}
+	<input type="submit" class="btn btn-primary">
+	{{ form_end(car_form) }}
 
 {% endblock %}
