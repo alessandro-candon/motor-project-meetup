@@ -53,3 +53,11 @@ php bin/console doctrine:schema:update --force
 ```bash
  php bin/console make:form  
 ```
+
+Trick to make the form compatible with Bootstrap 4 :
+
+*config/packages/twig.yaml*
+```yaml
+twig:
+    form_themes: ['bootstrap_4_layout.html.twig']
+```
