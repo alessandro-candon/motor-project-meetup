@@ -20,3 +20,19 @@ you can make the same with a .yaml file (recommended) :
 ```bash
 composer require annotations
 ```
+
+
+## ORM and DB
+First of all we need to configure the db URL, for example :
+
+```dotenv
+DATABASE_URL=mysql://root:mysqlroot@127.0.0.1:3306/motor_meetup_project?serverVersion=5.7
+```
+* Database Engine : mysql
+* User : root
+* Psw : mysqlroot
+* Host : 127.0.0.1
+* Port : 3306
+* DBName : motor_meetup_project
+* serverVersion : 5.7
+
