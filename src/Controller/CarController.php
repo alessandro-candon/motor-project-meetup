@@ -18,11 +18,13 @@ class CarController extends AbstractController
      * @Route("/car", name="car")
      * @param Request $request
      * @param EntityManagerInterface $entityManager
+     * @param CarRepository $carRepository
      * @return Response
      */
     public function index(
         Request $request,
-        EntityManagerInterface $entityManager
+        EntityManagerInterface $entityManager,
+        CarRepository $carRepository
     ) {
         /** @var Car $car */
         $car = new Car();
@@ -37,9 +39,13 @@ class CarController extends AbstractController
             $entityManager->flush();
         }
 
+        /** @var Car[] $cars */
+        $cars = $carRepository->findAll();
+
         return $this->render('car/index.html.twig', [
             'controller_name' => 'CarController',
-            'car_form' => $carForm->createView()
+            'car_form' => $carForm->createView(),
+            'cars' => $cars
         ]);
     }
 }

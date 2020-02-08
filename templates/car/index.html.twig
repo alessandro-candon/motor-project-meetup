@@ -9,4 +9,22 @@
 	<input type="submit" class="btn btn-primary">
 	{{ form_end(car_form) }}
 
+	<div class="jumbotron">
+		{% for car in cars %}
+			<div class="row">
+				<div class="col">
+					{{ car.id }}
+				</div>
+				<div class="col">
+					{{ car.name }}
+				</div>
+				<div class="col">
+					{{ car.brand }}
+				</div>
+				<div class="col">
+					{{ car.createdAt | date }}
+				</div>
+			</div>
+		{% endfor %}
+	</div>
 {% endblock %}
