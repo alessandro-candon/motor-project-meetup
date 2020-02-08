@@ -69,3 +69,11 @@ Is quite simple, the first step is to install the bundle.
 ```bash
  composer require api
 ```
+
+We test the POST with this curl :
+
+```bash
+
+curl -X POST "http://127.0.0.1:8000/api/cars" -H "accept: application/ld+json" -H "Content-Type: application/ld+json" -d "{\"name\":\"X3\",\"brand\":\"BMW\",\"createdAt\":\"2020-02-08T09:03:23.852Z\"}"
+
+```
