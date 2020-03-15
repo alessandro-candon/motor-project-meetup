@@ -12,5 +12,6 @@ easy_admin:
               expanded: true
               multiple: false
               choices: '%brand_types%'
+          - property: 'color'
     Color:
       class: App\Entity\Color
