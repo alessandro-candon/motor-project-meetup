@@ -33,6 +33,11 @@ class Car
      */
     private $createdAt;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Color", inversedBy="cars")
+     */
+    private $color;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -71,6 +76,24 @@ class Car
     {
         $this->createdAt = $createdAt;
 
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getColor()
+    {
+        return $this->color;
+    }
+
+    /**
+     * @param mixed $color
+     * @return Car
+     */
+    public function setColor($color)
+    {
+        $this->color = $color;
         return $this;
     }
 }
