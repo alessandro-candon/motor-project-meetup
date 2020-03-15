@@ -1,14 +1,16 @@
 easy_admin:
-    entities:
-        Car:
-         class: App\Entity\Car
-         form:
-           fields:
-             - property: 'name'
-             - property: 'brand'
-               type: 'choice'
-               type_options:
-                   mapped: true
-                   expanded: true
-                   multiple: false
-                   choices: '%brand_types%'
+  entities:
+    Car:
+      class: App\Entity\Car
+      form:
+        fields:
+          - property: 'name'
+          - property: 'brand'
+            type: 'choice'
+            type_options:
+              mapped: true
+              expanded: true
+              multiple: false
+              choices: '%brand_types%'
+    Color:
+      class: App\Entity\Color

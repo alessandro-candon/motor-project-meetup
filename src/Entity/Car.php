@@ -38,6 +38,12 @@ class Car
      */
     private $color;
 
+    public function __toString()
+    {
+        return "$this->name [$this->brand]";
+    }
+
+
     public function getId(): ?int
     {
         return $this->id;

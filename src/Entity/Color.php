@@ -28,6 +28,15 @@ class Color
      */
     private $cars;
 
+    /**
+     * @return string|null
+     */
+    public function __toString()
+    {
+        return $this->getHex();
+    }
+
+
     public function getId(): ?int
     {
         return $this->id;
