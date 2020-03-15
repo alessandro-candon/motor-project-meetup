@@ -3,5 +3,19 @@
 {% block title %}Hello ColorController!{% endblock %}
 
 {% block container %}
-
+    <div class="jumbotron">
+        {% for color in colors %}
+            <div class="row">
+                <div class="col">
+                    {{ color.id }}
+                </div>
+                <div class="col">
+                    {{ color.hex }}
+                </div>
+                <div class="col">
+                    <div style="width: 100px; height: 40px; background-color: {{ color.hex }};"></div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
