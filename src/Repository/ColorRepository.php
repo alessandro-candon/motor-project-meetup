@@ -12,7 +12,7 @@ use Doctrine\Persistence\ManagerRegistry;
  * @method Car[]    findAll()
  * @method Car[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class CarRepository extends ServiceEntityRepository
+class ColorRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
